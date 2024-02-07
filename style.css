@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
-    --main-pink: #EBBAB9;
-    --main-white: #CFCFCF;
+    --primary-color: #004a4e;
+    --secondary-color: #f2a91f;
+    --tertiary-color: #cc627b;
+    --quaternary-color: #958e7f;
 }
 html{
-    background-image: linear-gradient(to top, #09203f 0%, #09203f 100%);
+    background-image: linear-gradient(to top, rgb(47, 111, 117) 0%, var(--primary-color) 30%);
     height: 100%;
 }
 
@@ -20,14 +22,14 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: var(--main-pink)
+    color: var(--secondary-color)
 }
 .subtitle {
     font-family: 'Dosis', sans-serif;
     font-weight: 100;
     font-size: 1.8em;
     margin-top: 15px;
-    border-bottom: 1px solid var(--main-pink);
+    border-bottom: 1px solid var(--secondary-color);
 }
 .title {
     font-size: 3em;
@@ -40,12 +42,12 @@ header {
     justify-content: space-evenly;
     align-items: center;
     width: min(100vw, 450px);
-    background-color: #fff;
+    background-color: var(--quaternary-color);
     border-radius: 20px;
     margin-top: 30px;
     padding: 20px;
     font-size: 1.3em;
-    box-shadow: #EBBAB966 -5px 5px, #EBBAB94d -10px 10px, #EBBAB933 -15px 15px, #EBBAB91a -20px 20px, #EBBAB90d -25px 25px;
+    box-shadow: #958e7f66 -5px 5px, #958e7f4d -10px 10px, #958e7f33 -15px 15px, #958e7f1a -20px 20px, #958e7f0d -25px 25px;
 }
 .checker label {
     margin-bottom: 15px;
@@ -55,14 +57,15 @@ header {
     width: 250px;
     font-size: 1.2rem;
     border: none;
-    border-bottom: 2px solid #5a01a7; 
+    background-color: var(--quaternary-color);
+    border-bottom: 4px solid var(--tertiary-color); 
     margin: 10px 0;
 }
 button {
     position: relative;
-    background-color: rgb(230, 34, 77);
+    background-color: var(--tertiary-color);
     border-radius: 5px;
-    box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+    box-shadow: #791237 0px 4px 0px 0px;
     background-repeat: no-repeat;
     cursor: pointer;
     box-sizing: border-box;
@@ -74,9 +77,9 @@ button {
     transition: all 0.3s ease-in-out;
     z-index: 1;
     overflow: hidden;
-  }
-  
-  button::before {
+}
+
+button::before {
     content: "";
     background-color: rgb(248, 50, 93);
     width: 0;
@@ -87,12 +90,12 @@ button {
     z-index: -1;
     transition: width 700ms ease-in-out;
     display: inline-block;
-  }
-  
-  button:hover::before {
+}
+
+button:hover::before {
     width: 100%;
-  }
-  
+}
+
 
 
 .definition {
@@ -101,8 +104,7 @@ button {
     justify-content: space-evenly;
     align-items: center;
     width: min(100vw, 650px);
-    background-color: #CC2936;
-    color: #DDF8E8;
+    background-color: var(--quaternary-color);;
     border-radius: 20px;
     margin-top: 75px;
     padding: 20px;
